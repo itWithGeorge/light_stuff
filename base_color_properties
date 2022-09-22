@@ -1,0 +1,22 @@
+class LoyaltyColors {
+
+  const LoyaltyColors();
+
+  // General
+  Color get link => primary700;
+
+  Color get available => primary100;
+ // .....
+}
+
+abstract class BaseKraftyColorProperties {
+  Color get link;
+  Color get available;
+//......
+}
+
+class LoyaltyColorsImplementation extends BaseKraftyColorProperties {
+  Color get link => Colors.blue;
+  Color get available => Colors.red;
+  //.....
+}
