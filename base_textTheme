@@ -1,0 +1,32 @@
+class KraftyTextTheme {
+  
+  // ....
+  
+  static const regularBaseTheme = TextTheme(
+    headline1: TextStyle(fontWeight: FontWeight.w300, fontSize: 48, height: 1.1667),
+    headline2: TextStyle(fontWeight: FontWeight.w300, fontSize: 40, height: 1.2),
+    headline3: TextStyle(fontWeight: FontWeight.w400, fontSize: 32, height: 1.25),
+    headline4: TextStyle(fontWeight: FontWeight.w400, fontSize: 24, height: 1.667),
+    headline5: TextStyle(fontWeight: FontWeight.w400, fontSize: 20, height: 1.2),
+    headline6: TextStyle(fontWeight: FontWeight.w400, fontSize: 18, height: 1.2222),
+    subtitle1: TextStyle(fontWeight: FontWeight.w400, fontSize: 16, height: 1.375),
+    bodyText1: TextStyle(fontWeight: FontWeight.w400, fontSize: 14, height: 1.4286),
+    bodyText2: TextStyle(fontWeight: FontWeight.w400, fontSize: 12, height: 1.3333),
+    caption: TextStyle(fontWeight: FontWeight.w400, fontSize: 10, height: 1.6),
+  );
+
+ //....
+
+  // new addition
+  static const sampleTheme = BaseKraftyTextTheme(
+      headline1: TextStyle(fontWeight: FontWeight.w400, fontSize: 48, height: 1.1667, fontStyle: FontStyle.italic),
+      headline2: TextStyle(fontWeight: FontWeight.w400, fontSize: 40, height: 1.2, fontStyle: FontStyle.italic));
+}
+
+// new addition
+class BaseKraftyTextTheme extends TextTheme {
+  const BaseKraftyTextTheme({
+    required super.headline1,
+    required super.headline2,
+  });
+}
