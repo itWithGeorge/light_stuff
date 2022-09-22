@@ -1,0 +1,53 @@
+class KraftyTheme {
+  KraftyTheme._();
+
+  static final KraftyTheme _instance = KraftyTheme._();
+  static KraftyTheme get instance => _instance;
+}
+
+class KraftyColors {
+  const KraftyColors();
+}
+
+class KraftyTextStyles {
+  const KraftyTextStyles();
+}
+
+class KraftyThemeOrigin {
+  KraftyThemeOrigin();
+
+  //final colors = const KraftyColors();
+  //final textStyles = KraftyTextStyles();
+
+  static final instance = KraftyThemeOrigin();
+}
+
+
+
+
+void main() {
+  var k1 = KraftyTheme.instance;
+  var k2 = KraftyTheme.instance;
+  print(identical(k1, k2));  // true
+  print(k1 == k2); // true
+  
+  var ko1 = KraftyThemeOrigin.instance;
+  var ko2 = KraftyThemeOrigin.instance;
+  
+  print(identical(ko1, ko2));  // true
+  print(ko1 == ko2); // true
+  
+  var koImp1 = KraftyThemeOrigin();
+  var koImp2 = KraftyThemeOrigin();
+  
+  print(identical(koImp1, koImp2));  // false
+  print(koImp1 == koImp2); // false
+  
+  var koImpV1 = KraftyThemeOrigin();
+  var koImpV2 = KraftyThemeOrigin.instance;
+  
+  print(identical(koImpV1, koImpV2));  // false
+  print(koImpV1 == koImpV2); // false
+  
+  
+}
